@@ -1,0 +1,2415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Hatkesh Bhojnalaya - Authentic Gujarati Food in Haridwar">
+
+    <title>
+        Hatkesh Bhojnalaya | Authentic Gujarati Food in Haridwar
+    </title>
+
+
+    <style>
+
+        /* ========================================= */
+        /* GLOBAL */
+        /* ========================================= */
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            background:
+                #f8f3e9;
+
+            color:
+                #2b1b12;
+
+            overflow-x:
+                hidden;
+
+        }
+
+
+        /* ========================================= */
+        /* PAGE LOADER */
+        /* ========================================= */
+
+        #loader {
+
+            position:
+                fixed;
+
+            top:
+                0;
+
+            left:
+                0;
+
+            width:
+                100%;
+
+            height:
+                100vh;
+
+            z-index:
+                99999;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            text-align:
+                center;
+
+            background:
+
+                radial-gradient(
+                    circle at center,
+                    #8d2424,
+                    #3c0808
+                );
+
+            color:
+                white;
+
+            transition:
+                0.8s;
+
+        }
+
+
+        .loader-logo {
+
+            font-size:
+                45px;
+
+            font-weight:
+                bold;
+
+            letter-spacing:
+                4px;
+
+            color:
+                #f5c76a;
+
+            text-shadow:
+
+                0 0 20px
+                rgba(245,199,106,0.5);
+
+            animation:
+                loaderPulse
+                1.5s
+                infinite;
+
+        }
+
+
+        .loader-text {
+
+            margin-top:
+                15px;
+
+            letter-spacing:
+                4px;
+
+            font-size:
+                13px;
+
+        }
+
+
+        .loader-line {
+
+            margin-top:
+                30px;
+
+            width:
+                230px;
+
+            height:
+                3px;
+
+            background:
+                rgba(255,255,255,0.2);
+
+            border-radius:
+                20px;
+
+            overflow:
+                hidden;
+
+        }
+
+
+        .loader-progress {
+
+            height:
+                100%;
+
+            width:
+                0;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #f5c76a,
+                    white,
+                    #f5c76a
+                );
+
+            animation:
+                loading
+                2.5s
+                forwards;
+
+        }
+
+
+        @keyframes loaderPulse {
+
+            0% {
+
+                transform:
+                    scale(1);
+
+            }
+
+            50% {
+
+                transform:
+                    scale(1.08);
+
+            }
+
+            100% {
+
+                transform:
+                    scale(1);
+
+            }
+
+        }
+
+
+        @keyframes loading {
+
+            from {
+
+                width:
+                    0;
+
+            }
+
+            to {
+
+                width:
+                    100%;
+
+            }
+
+        }
+
+
+        /* ========================================= */
+        /* PREMIUM HEADER */
+        /* ========================================= */
+
+        .premium-header {
+
+            position:
+                relative;
+
+            min-height:
+                290px;
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            text-align:
+                center;
+
+            overflow:
+                hidden;
+
+            padding:
+                40px
+                20px;
+
+            background:
+
+                radial-gradient(
+                    circle at 50% 20%,
+                    rgba(245,199,106,0.20),
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #3b0707,
+                    #681717,
+                    #9a2929,
+                    #4b0909
+                );
+
+            background-size:
+                100%
+                100%,
+                300%
+                300%;
+
+            animation:
+                headerBackground
+                12s
+                ease
+                infinite;
+
+            border-bottom:
+                3px
+                solid
+                #f5c76a;
+
+        }
+
+
+        @keyframes headerBackground {
+
+            0% {
+
+                background-position:
+                    center,
+                    0%
+                    50%;
+
+            }
+
+            50% {
+
+                background-position:
+                    center,
+                    100%
+                    50%;
+
+            }
+
+            100% {
+
+                background-position:
+                    center,
+                    0%
+                    50%;
+
+            }
+
+        }
+
+
+        /* BACKGROUND PARTICLES */
+
+        .premium-header::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            background-image:
+
+                radial-gradient(
+                    circle,
+                    rgba(245,199,106,0.6)
+                    1px,
+                    transparent
+                    1px
+                );
+
+            background-size:
+                35px
+                35px;
+
+            opacity:
+                0.18;
+
+            animation:
+                particles
+                18s
+                linear
+                infinite;
+
+        }
+
+
+        @keyframes particles {
+
+            from {
+
+                transform:
+                    translateY(0);
+
+            }
+
+            to {
+
+                transform:
+                    translateY(-100px);
+
+            }
+
+        }
+
+
+        /* HEADER GLOW */
+
+        .header-glow {
+
+            position:
+                absolute;
+
+            width:
+                280px;
+
+            height:
+                280px;
+
+            border-radius:
+                50%;
+
+            background:
+                #f5c76a;
+
+            filter:
+                blur(100px);
+
+            opacity:
+                0.18;
+
+            animation:
+                glow
+                6s
+                infinite
+                alternate;
+
+        }
+
+
+        .glow-left {
+
+            left:
+                -100px;
+
+            top:
+                0;
+
+        }
+
+
+        .glow-right {
+
+            right:
+                -100px;
+
+            bottom:
+                0;
+
+        }
+
+
+        @keyframes glow {
+
+            from {
+
+                transform:
+                    scale(1);
+
+            }
+
+            to {
+
+                transform:
+                    scale(1.5);
+
+            }
+
+        }
+
+
+        /* BRAND */
+
+        .brand-container {
+
+            position:
+                relative;
+
+            z-index:
+                5;
+
+            animation:
+                brandEntry
+                1.5s
+                ease;
+
+        }
+
+
+        @keyframes brandEntry {
+
+            from {
+
+                opacity:
+                    0;
+
+                transform:
+                    translateY(-30px);
+
+            }
+
+            to {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(0);
+
+            }
+
+        }
+
+
+        .brand-top {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                15px;
+
+            color:
+                #f5c76a;
+
+            margin-bottom:
+                12px;
+
+        }
+
+
+        .brand-top span {
+
+            width:
+                120px;
+
+            height:
+                1px;
+
+            background:
+
+                linear-gradient(
+                    to right,
+                    transparent,
+                    #f5c76a,
+                    transparent
+                );
+
+        }
+
+
+        .brand-subtitle {
+
+            color:
+                #f5c76a;
+
+            font-size:
+                12px;
+
+            letter-spacing:
+                5px;
+
+            font-weight:
+                bold;
+
+        }
+
+
+        .brand-name {
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+        }
+
+
+        .brand-name h1 {
+
+            font-size:
+                68px;
+
+            font-weight:
+                900;
+
+            letter-spacing:
+                3px;
+
+            color:
+                white;
+
+            text-shadow:
+
+                0 4px 0
+                #711313,
+
+                0 10px 25px
+                rgba(0,0,0,0.5);
+
+        }
+
+
+        .brand-name h1 span {
+
+            display:
+                block;
+
+            color:
+                #f5c76a;
+
+            font-size:
+                35px;
+
+            letter-spacing:
+                10px;
+
+            margin-top:
+                5px;
+
+        }
+
+
+        .brand-name::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            top:
+                0;
+
+            left:
+                -100%;
+
+            width:
+                45%;
+
+            height:
+                100%;
+
+            background:
+
+                linear-gradient(
+                    120deg,
+                    transparent,
+                    rgba(255,255,255,0.7),
+                    transparent
+                );
+
+            transform:
+                skewX(-20deg);
+
+            animation:
+                shine
+                5s
+                infinite;
+
+        }
+
+
+        @keyframes shine {
+
+            0% {
+
+                left:
+                    -100%;
+
+            }
+
+            50% {
+
+                left:
+                    150%;
+
+            }
+
+            100% {
+
+                left:
+                    150%;
+
+            }
+
+        }
+
+
+        .brand-tagline {
+
+            margin-top:
+                18px;
+
+            font-size:
+                17px;
+
+            color:
+                white;
+
+            letter-spacing:
+                2px;
+
+        }
+
+
+        /* ========================================= */
+        /* NAVIGATION */
+        /* ========================================= */
+
+        .premium-nav {
+
+            position:
+                sticky;
+
+            top:
+                0;
+
+            z-index:
+                999;
+
+            background:
+                rgba(70,10,10,0.97);
+
+            border-bottom:
+                1px
+                solid
+                rgba(245,199,106,0.6);
+
+            box-shadow:
+                0 8px 25px
+                rgba(0,0,0,0.25);
+
+        }
+
+
+        .nav-wrapper {
+
+            max-width:
+                1100px;
+
+            margin:
+                auto;
+
+            padding:
+                14px
+                20px;
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                12px;
+
+        }
+
+
+        .nav-link {
+
+            text-decoration:
+                none;
+
+            color:
+                white;
+
+            font-weight:
+                bold;
+
+            padding:
+                12px
+                20px;
+
+            border-radius:
+                30px;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .nav-link:hover {
+
+            background:
+                #f5c76a;
+
+            color:
+                #651b1b;
+
+            transform:
+                translateY(-3px);
+
+        }
+
+
+        .order-nav {
+
+            background:
+                #f5c76a;
+
+            color:
+                #651b1b;
+
+        }
+
+
+        /* ========================================= */
+        /* HERO */
+        /* ========================================= */
+
+        .hero {
+
+            position:
+                relative;
+
+            padding:
+                80px
+                20px;
+
+            text-align:
+                center;
+
+            overflow:
+                hidden;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #651b1b,
+                    #8c2424,
+                    #651b1b
+                );
+
+        }
+
+
+        .hero::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                500px;
+
+            height:
+                500px;
+
+            border:
+                2px
+                solid
+                rgba(245,199,106,0.15);
+
+            border-radius:
+                50%;
+
+            top:
+                -300px;
+
+            right:
+                -150px;
+
+        }
+
+
+        .hero-content {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            max-width:
+                1100px;
+
+            margin:
+                auto;
+
+        }
+
+
+        .welcome-text {
+
+            color:
+                #f5c76a;
+
+            letter-spacing:
+                5px;
+
+            font-size:
+                14px;
+
+            margin-bottom:
+                25px;
+
+        }
+
+
+        /* ORIGINAL BOARD IMAGE */
+
+        .board-image {
+
+            width:
+                100%;
+
+            max-width:
+                900px;
+
+            border-radius:
+                25px;
+
+            border:
+                4px
+                solid
+                #f5c76a;
+
+            box-shadow:
+
+                0 20px 60px
+                rgba(0,0,0,0.5),
+
+                0 0 30px
+                rgba(245,199,106,0.25);
+
+            animation:
+                boardFloat
+                5s
+                ease-in-out
+                infinite;
+
+        }
+
+
+        @keyframes boardFloat {
+
+            0% {
+
+                transform:
+                    translateY(0);
+
+            }
+
+            50% {
+
+                transform:
+                    translateY(-12px);
+
+            }
+
+            100% {
+
+                transform:
+                    translateY(0);
+
+            }
+
+        }
+
+
+        .hero-description {
+
+            max-width:
+                750px;
+
+            margin:
+                35px
+                auto;
+
+            color:
+                white;
+
+            font-size:
+                20px;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        /* ========================================= */
+        /* BUTTONS */
+        /* ========================================= */
+
+        .buttons {
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                18px;
+
+        }
+
+
+        .btn {
+
+            text-decoration:
+                none;
+
+            padding:
+                16px
+                28px;
+
+            border-radius:
+                10px;
+
+            font-weight:
+                bold;
+
+            font-size:
+                16px;
+
+            transition:
+                0.3s;
+
+            box-shadow:
+                0 8px 20px
+                rgba(0,0,0,0.2);
+
+        }
+
+
+        .whatsapp {
+
+            color:
+                white;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #25D366,
+                    #16a85a
+                );
+
+        }
+
+
+        .location {
+
+            background:
+                #f5c76a;
+
+            color:
+                #4b0909;
+
+        }
+
+
+        .btn:hover {
+
+            transform:
+                translateY(-5px)
+                scale(1.03);
+
+        }
+
+
+        /* ========================================= */
+        /* SECTION */
+        /* ========================================= */
+
+        .section {
+
+            padding:
+                90px
+                10%;
+
+            text-align:
+                center;
+
+            position:
+                relative;
+
+        }
+
+
+        .section-title {
+
+            font-size:
+                40px;
+
+            color:
+                #651b1b;
+
+            margin-bottom:
+                20px;
+
+        }
+
+
+        .gold-line {
+
+            width:
+                90px;
+
+            height:
+                4px;
+
+            background:
+                #f5c76a;
+
+            margin:
+                auto
+                auto
+                30px;
+
+            border-radius:
+                10px;
+
+        }
+
+
+        .section p {
+
+            font-size:
+                18px;
+
+            line-height:
+                1.9;
+
+            max-width:
+                800px;
+
+            margin:
+                auto;
+
+        }
+
+
+        /* ========================================= */
+        /* FOOD HIGHLIGHTS */
+        /* ========================================= */
+
+        .food-section {
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #fffaf0,
+                    #f4e6cb
+                );
+
+        }
+
+
+        .food-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+
+                repeat(
+                    auto-fit,
+                    minmax(200px,1fr)
+                );
+
+            gap:
+                25px;
+
+            max-width:
+                1000px;
+
+            margin:
+                50px
+                auto
+                0;
+
+        }
+
+
+        .food-card {
+
+            background:
+                white;
+
+            padding:
+                35px
+                20px;
+
+            border-radius:
+                20px;
+
+            border:
+                1px
+                solid
+                rgba(101,27,27,0.1);
+
+            box-shadow:
+                0 10px 30px
+                rgba(0,0,0,0.08);
+
+            transition:
+                0.4s;
+
+        }
+
+
+        .food-card:hover {
+
+            transform:
+                translateY(-10px);
+
+            box-shadow:
+                0 20px 40px
+                rgba(0,0,0,0.15);
+
+        }
+
+
+        .food-icon {
+
+            font-size:
+                45px;
+
+            margin-bottom:
+                15px;
+
+        }
+
+
+        .food-card h3 {
+
+            color:
+                #651b1b;
+
+            margin-bottom:
+                10px;
+
+        }
+
+
+        /* ========================================= */
+        /* ABOUT */
+        /* ========================================= */
+
+        .about-section {
+
+            background:
+                white;
+
+        }
+
+
+        .about-box {
+
+            max-width:
+                850px;
+
+            margin:
+                auto;
+
+            padding:
+                45px;
+
+            border-radius:
+                25px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #fffdf8,
+                    #f6ead4
+                );
+
+            box-shadow:
+                0 15px 40px
+                rgba(0,0,0,0.08);
+
+        }
+
+
+        /* ========================================= */
+        /* ORDER */
+        /* ========================================= */
+
+        .order-section {
+
+            text-align:
+                center;
+
+            padding:
+                100px
+                20px;
+
+            color:
+                white;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #4b0909,
+                    #8c2424,
+                    #4b0909
+                );
+
+        }
+
+
+        .order-section h2 {
+
+            font-size:
+                42px;
+
+            margin-bottom:
+                20px;
+
+            color:
+                #f5c76a;
+
+        }
+
+
+        .order-section p {
+
+            font-size:
+                18px;
+
+            margin-bottom:
+                35px;
+
+        }
+
+
+        /* ========================================= */
+        /* LOCATION */
+        /* ========================================= */
+
+        .location-section {
+
+            background:
+                #f8f3e9;
+
+        }
+
+
+        .location-box {
+
+            max-width:
+                700px;
+
+            margin:
+                40px
+                auto
+                0;
+
+            padding:
+                45px
+                25px;
+
+            background:
+                white;
+
+            border-radius:
+                25px;
+
+            box-shadow:
+                0 15px 40px
+                rgba(0,0,0,0.1);
+
+        }
+
+
+        .location-icon {
+
+            font-size:
+                45px;
+
+            margin-bottom:
+                15px;
+
+        }
+
+
+        /* ========================================= */
+        /* FOOTER */
+        /* ========================================= */
+
+        footer {
+
+            padding:
+                50px
+                20px;
+
+            text-align:
+                center;
+
+            color:
+                white;
+
+            background:
+                #3b0707;
+
+            border-top:
+                3px
+                solid
+                #f5c76a;
+
+        }
+
+
+        .footer-name {
+
+            font-size:
+                25px;
+
+            font-weight:
+                bold;
+
+            color:
+                #f5c76a;
+
+            margin-bottom:
+                15px;
+
+        }
+
+
+        .footer-phone {
+
+            margin-top:
+                15px;
+
+            font-size:
+                18px;
+
+        }
+
+
+        .copyright {
+
+            margin-top:
+                25px;
+
+            opacity:
+                0.7;
+
+            font-size:
+                14px;
+
+        }
+
+
+        /* ========================================= */
+        /* SCROLL TOP */
+        /* ========================================= */
+
+        #scrollTop {
+
+            position:
+                fixed;
+
+            bottom:
+                25px;
+
+            right:
+                20px;
+
+            width:
+                50px;
+
+            height:
+                50px;
+
+            border:
+                none;
+
+            border-radius:
+                50%;
+
+            background:
+                #651b1b;
+
+            color:
+                #f5c76a;
+
+            font-size:
+                22px;
+
+            cursor:
+                pointer;
+
+            display:
+                none;
+
+            z-index:
+                100;
+
+            box-shadow:
+                0 8px 20px
+                rgba(0,0,0,0.25);
+
+        }
+
+
+        /* ========================================= */
+        /* MOBILE */
+        /* ========================================= */
+
+        @media
+        (max-width: 700px) {
+
+
+            .loader-logo {
+
+                font-size:
+                    30px;
+
+                letter-spacing:
+                    2px;
+
+            }
+
+
+            .premium-header {
+
+                min-height:
+                    250px;
+
+                padding:
+                    30px
+                    15px;
+
+            }
+
+
+            .brand-name h1 {
+
+                font-size:
+                    42px;
+
+            }
+
+
+            .brand-name h1 span {
+
+                font-size:
+                    22px;
+
+                letter-spacing:
+                    5px;
+
+            }
+
+
+            .brand-subtitle {
+
+                font-size:
+                    9px;
+
+                letter-spacing:
+                    3px;
+
+            }
+
+
+            .brand-tagline {
+
+                font-size:
+                    14px;
+
+            }
+
+
+            .brand-top span {
+
+                width:
+                    60px;
+
+            }
+
+
+            .nav-wrapper {
+
+                gap:
+                    5px;
+
+                padding:
+                    10px
+                    5px;
+
+            }
+
+
+            .nav-link {
+
+                font-size:
+                    12px;
+
+                padding:
+                    10px
+                    10px;
+
+            }
+
+
+            .hero {
+
+                padding:
+                    60px
+                    15px;
+
+            }
+
+
+            .welcome-text {
+
+                font-size:
+                    11px;
+
+                letter-spacing:
+                    3px;
+
+            }
+
+
+            .board-image {
+
+                border-radius:
+                    15px;
+
+                border-width:
+                    3px;
+
+            }
+
+
+            .hero-description {
+
+                font-size:
+                    16px;
+
+            }
+
+
+            .btn {
+
+                width:
+                    100%;
+
+                max-width:
+                    320px;
+
+            }
+
+
+            .section {
+
+                padding:
+                    65px
+                    20px;
+
+            }
+
+
+            .section-title {
+
+                font-size:
+                    30px;
+
+            }
+
+
+            .section p {
+
+                font-size:
+                    16px;
+
+            }
+
+
+            .about-box {
+
+                padding:
+                    30px
+                    20px;
+
+            }
+
+
+            .order-section {
+
+                padding:
+                    70px
+                    20px;
+
+            }
+
+
+            .order-section h2 {
+
+                font-size:
+                    30px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================= -->
+    <!-- LOADING SCREEN -->
+    <!-- ========================= -->
+
+    <div id="loader">
+
+        <div class="loader-logo">
+
+            HATKESH BHOJNALAYA
+
+        </div>
+
+        <div class="loader-text">
+
+            AUTHENTIC GUJARATI FOOD
+
+        </div>
+
+        <div class="loader-line">
+
+            <div class="loader-progress"></div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================= -->
+    <!-- PREMIUM HEADER -->
+    <!-- ========================= -->
+
+    <header class="premium-header">
+
+        <div class="header-glow glow-left"></div>
+
+        <div class="header-glow glow-right"></div>
+
+
+        <div class="brand-container">
+
+
+            <div class="brand-top">
+
+                <span></span>
+
+                ✦
+
+                <span></span>
+
+            </div>
+
+
+            <div class="brand-subtitle">
+
+                AUTHENTIC GUJARATI CUISINE
+
+            </div>
+
+
+            <div class="brand-name">
+
+                <h2>
+
+                    HATKESH BHOJNALAYA
+
+                    
+
+                 
+
+                
+
+                </h2>
+
+            </div>
+
+
+            <div class="brand-tagline">
+
+                स्वाद • परंपरा • घर जैसा प्यार
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ========================= -->
+    <!-- NAVIGATION -->
+    <!-- ========================= -->
+
+    <nav class="premium-nav">
+
+        <div class="nav-wrapper">
+
+            <a
+                href="#home"
+                class="nav-link">
+
+                🏠 Home
+
+            </a>
+
+
+            <a
+                href="#about"
+                class="nav-link">
+
+                ✨ About
+
+            </a>
+
+
+            <a
+                href="#food"
+                class="nav-link">
+
+                🍛 Food
+
+            </a>
+
+
+            <a
+                href="#order"
+                class="nav-link order-nav">
+
+                🍽 Order
+
+            </a>
+
+
+            <a
+                href="#location"
+                class="nav-link">
+
+                📍 Location
+
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ========================= -->
+    <!-- HERO -->
+    <!-- ========================= -->
+
+    <section
+        class="hero"
+        id="home">
+
+
+        <div class="hero-content">
+
+
+            <p class="welcome-text">
+
+                ✦ WELCOME TO HATKESH BHOJNALAYA ✦
+
+            </p>
+
+
+            <!-- BOARD IMAGE -->
+
+            <img
+                src="hatkesh-board.jpg"
+                alt="Hatkesh Bhojnalaya Gujarati Food"
+                class="board-image">
+
+
+            <p class="hero-description">
+
+                स्वादिष्ट, शुद्ध और घर जैसा गुजराती खाना।
+
+                <br>
+
+                आइए और हमारे स्वादिष्ट भोजन का आनंद लीजिए।
+
+            </p>
+
+
+            <div class="buttons">
+
+
+                <a
+
+                    href="https://wa.me/919909113931?text=Hello%20Hatkesh%20Bhojnalaya%2C%20I%20want%20to%20place%20an%20order."
+
+                    target="_blank"
+
+                    class="btn whatsapp">
+
+                    🟢 Order on WhatsApp
+
+                </a>
+
+
+                <a
+
+                    href="https://share.google/MDlUZXm74mxsk6Bsq"
+
+                    target="_blank"
+
+                    class="btn location">
+
+                    📍 View Location
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- FOOD -->
+    <!-- ========================= -->
+
+    <section
+        class="section food-section"
+        id="food">
+
+
+        <h2 class="section-title">
+
+            Our Gujarati Food
+
+        </h2>
+
+
+        <div class="gold-line"></div>
+
+
+        <p>
+
+            घर जैसा स्वाद और गुजराती खाने की असली परंपरा।
+
+        </p>
+
+
+        <div class="food-grid">
+
+
+            <div class="food-card">
+
+                <div class="food-icon">
+
+                    🍛
+
+                </div>
+
+                <h3>
+
+                    Gujarati Thali
+
+                </h3>
+
+                <p>
+
+                    स्वादिष्ट और पारंपरिक गुजराती भोजन।
+
+                </p>
+
+            </div>
+
+
+
+            <div class="food-card">
+
+                <div class="food-icon">
+
+                    🫓
+
+                </div>
+
+                <h3>
+
+                    Fresh Rotis
+
+                </h3>
+
+                <p>
+
+                    ताज़ा और घर जैसा स्वाद।
+
+                </p>
+
+            </div>
+
+
+
+            <div class="food-card">
+
+                <div class="food-icon">
+
+                    🥗
+
+                </div>
+
+                <h3>
+
+                    Fresh Food
+
+                </h3>
+
+                <p>
+
+                    शुद्ध और स्वादिष्ट भोजन।
+
+                </p>
+
+            </div>
+
+
+
+            <div class="food-card">
+
+                <div class="food-icon">
+
+                    ❤️
+
+                </div>
+
+                <h3>
+
+                    Made With Love
+
+                </h3>
+
+                <p>
+
+                    परिवार जैसा प्यार और बेहतरीन सेवा।
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- ABOUT -->
+    <!-- ========================= -->
+
+    <section
+        class="section about-section"
+        id="about">
+
+
+        <h2 class="section-title">
+
+            Welcome to Hatkesh Bhojnalaya
+
+        </h2>
+
+
+        <div class="gold-line"></div>
+
+
+        <div class="about-box">
+
+            <p>
+
+                Hatkesh Bhojnalaya brings you delicious and authentic Gujarati food
+                with the taste of home.
+
+                <br><br>
+
+                हमारा उद्देश्य है कि हर ग्राहक को स्वादिष्ट,
+                शुद्ध और घर जैसा भोजन मिले।
+
+                <br><br>
+
+                हम Quality Food, Cleanliness और Great Service
+                पर विशेष ध्यान देते हैं।
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- ORDER -->
+    <!-- ========================= -->
+
+    <section
+        class="order-section"
+        id="order">
+
+
+        <h2>
+
+            🍽 Order Your Food Online
+
+        </h2>
+
+
+        <p>
+
+            WhatsApp पर सीधे अपना Order भेजें।
+
+        </p>
+
+
+        <a
+
+            href="https://wa.me/919909113931?text=Hello%20Hatkesh%20Bhojnalaya%2C%20I%20want%20to%20place%20an%20order."
+
+            target="_blank"
+
+            class="btn whatsapp">
+
+            🛒 Place Your Order
+
+        </a>
+
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- LOCATION -->
+    <!-- ========================= -->
+
+    <section
+        class="section location-section"
+        id="location">
+
+
+        <h2 class="section-title">
+
+            Visit Us
+
+        </h2>
+
+
+        <div class="gold-line"></div>
+
+
+        <div class="location-box">
+
+
+            <div class="location-icon">
+
+                📍
+
+            </div>
+
+
+            <h3>
+
+                Hatkesh Bhojnalaya
+
+            </h3>
+
+
+            <br>
+
+
+            <p>
+
+                Haripur Kalan,
+                Haridwar
+
+            </p>
+
+
+            <br>
+
+
+            <a
+
+                href="https://share.google/MDlUZXm74mxsk6Bsq"
+
+                target="_blank"
+
+                class="btn location">
+
+                🗺 Open in Google Maps
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
+
+    <footer>
+
+
+        <div class="footer-name">
+
+            HATKESH BHOJNALAYA
+
+        </div>
+
+
+        <p>
+
+            Authentic Gujarati Food in Haridwar
+
+        </p>
+
+
+        <div class="footer-phone">
+
+            📞 +91 9909113931
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Hatkesh Bhojnalaya | All Rights Reserved
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- ========================= -->
+    <!-- SCROLL TOP -->
+    <!-- ========================= -->
+
+    <button
+        id="scrollTop"
+        onclick="scrollToTop()">
+
+        ↑
+
+    </button>
+
+
+
+    <!-- ========================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================= -->
+
+    <script>
+
+
+        /* LOADER */
+
+        window.addEventListener(
+
+            "load",
+
+            function () {
+
+                setTimeout(
+
+                    function () {
+
+                        document
+                            .getElementById("loader")
+                            .style
+                            .opacity = "0";
+
+
+                        setTimeout(
+
+                            function () {
+
+                                document
+                                    .getElementById("loader")
+                                    .style
+                                    .display = "none";
+
+                            },
+
+                            800
+
+                        );
+
+                    },
+
+                    1800
+
+                );
+
+            }
+
+        );
+
+
+
+        /* SCROLL TOP */
+
+        window.addEventListener(
+
+            "scroll",
+
+            function () {
+
+                let button =
+                    document.getElementById(
+                        "scrollTop"
+                    );
+
+
+                if (
+                    document
+                    .documentElement
+                    .scrollTop > 400
+                ) {
+
+                    button.style.display =
+                        "block";
+
+                }
+
+                else {
+
+                    button.style.display =
+                        "none";
+
+                }
+
+            }
+
+        );
+
+
+
+        function scrollToTop() {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
